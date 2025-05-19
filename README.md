@@ -123,6 +123,8 @@ We list our evaluation results as follows:
 ## 🧐 Cases
 ### Simple problem
 ![image](https://github.com/user-attachments/assets/1f6aaa1c-a1c8-4d49-92c5-2e1b219a643a)
+![image](https://github.com/user-attachments/assets/1c3d2dbc-5a98-4066-a8a8-90afff0fc7a3)
+
 
 ### Difficult problem
 ![image](https://github.com/user-attachments/assets/500a0377-3be4-48a2-b5a0-a98c7d228a30)
