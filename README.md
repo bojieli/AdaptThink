@@ -9,6 +9,7 @@
 - [⚙️ Released Models](#model)
 - [🔥 Training](#training)
 - [📊 Evaluation](#evaluation)
+- [🧐 Cases](#cases)
 - [📝 Citation](#citation)
 
 <a name="adapt_think"></a>
@@ -107,17 +108,24 @@ bash scripts/run_eval_hf.sh
 ```
 
 We list our evaluation results as follows:
-##### 1.  Comparison with existing methods for efficient reasoning on mathematics datasets
+#### 1.  Comparison with existing methods for efficient reasoning on mathematics datasets
 <img width="1447" alt="image" src="https://github.com/user-attachments/assets/53592ec3-17d9-4c4b-99ee-1868b5c82238" />
 
-##### 2. Nothinking responses ratio and accuracy across different difficulty levels on MATH500
+#### 2. Nothinking responses ratio and accuracy across different difficulty levels on MATH500
 <img width="1462" alt="image" src="https://github.com/user-attachments/assets/cc2de266-b67a-47ab-835d-9bce922b13fc" />
 
-##### 3. Comparison of different $\delta$ values
+#### 3. Comparison of different $\delta$ values
 <img width="1444" alt="image" src="https://github.com/user-attachments/assets/41c86f73-68f8-4d71-ac75-2033c43b964b" />
 
-##### 4. Evaluation results on MMLU
+#### 4. Evaluation results on MMLU
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/fdd20adc-b879-4105-8420-0851944c507f" />
+
+## 🧐 Cases
+#### Simple problem
+![image](https://github.com/user-attachments/assets/1f6aaa1c-a1c8-4d49-92c5-2e1b219a643a)
+
+#### Difficult problem
+![image](https://github.com/user-attachments/assets/500a0377-3be4-48a2-b5a0-a98c7d228a30)
 
 
 <a name="citation"></a>
