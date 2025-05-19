@@ -121,10 +121,10 @@ We list our evaluation results as follows:
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/fdd20adc-b879-4105-8420-0851944c507f" />
 
 ## 🧐 Cases
-#### Simple problem
+### Simple problem
 ![image](https://github.com/user-attachments/assets/1f6aaa1c-a1c8-4d49-92c5-2e1b219a643a)
 
-#### Difficult problem
+### Difficult problem
 ![image](https://github.com/user-attachments/assets/500a0377-3be4-48a2-b5a0-a98c7d228a30)
 
 
