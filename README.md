@@ -50,7 +50,10 @@ pip install -r requirements.txt
 pip install flash-attn --no-build-isolation
 ```
 
-### 2. Pre-sampling from reference models
+### 2. Check the chat template in HF models
+After you download DeepSeek models, you should check `chat_template` in `tokenizer_config.json` to ensure the template is ends with `<｜Assistant｜><think>\\n`, otherwise there will be bebud when running our code.
+
+### 3. Pre-sampling from reference models
 First, we need to pre-sample multiple responses from the reference model for each training problem to evalaute its instance-level accuracy. The sampling process will take severl hours. For convience, we have release our postprocessed results in `./data/train/ref_results` which .
 ```
 # Initialize VLLM server. Set tensor_parallel_size to 8 for 7B model
@@ -63,12 +66,12 @@ python src/presampling_ref_responses.py --K 16 --dataset_path ./data/train/deeps
 python src/postprocess_ref_results.py --input_path ./data/train/ref_presampling/DeepSeek-R1-Distill-Qwen-1.5B_deepscaler_n0_K16_len16384.json --output_path ./data/train/ref_results/DeepSeek-R1-Distill-Qwen-1.5B_deepscaler_K16_len16384.json
 ```
 
-### 3. Preprocess training and test Datasets
+### 4. Preprocess training and test Datasets
 ```
 bash scripts/preprocess_dataset.sh
 ```
 
-### 4. Training
+### 5. Training
 The training context size, batch size, and the learning rate are set to 16K, 128, and 2e-6, respectively. We train the models for 1 epoch, which is 314 steps in total. For the 1.5B model, we use one 8\*H800 node and cost about 32 hours. For the 7B model, we use four 8\*H800 nodes and cost about 28 hours. Finally, we select the checkpoints on 300 and 150 steps for the 1.5B and 7B models, respectively, where the models' accuracy and response lengths achieve a good balance.
 
 To facilitate the training process, you can set a larger learning rate, such as 5e-5. However, it may make the training more unstable.
