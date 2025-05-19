@@ -13,7 +13,7 @@
 
 <a name="adapt_think"></a>
 ## 🤖️ AdaptThink
-We present **AdapThink**, a novel reinforcement learning (RL) algorithm that enables reasoning models to adaptively choose between **Thinking** and **NoThinking** modes according to the difficulty of each input problem, thereby achieving automatic hybrid reasoning. Specifically, the model engages in thinking only when the problem is determined to be challenging; for other simple question, it will bypass the thinking process and directly produce a concise final solution. This approach substantially reduces inference costs while further improving overall performance.
+We present **AdapThink**, a novel reinforcement learning (RL) algorithm that enables reasoning models to adaptively choose between **Thinking** and **NoThinking** modes according to the difficulty of each input problem, thereby achieving automatic hybrid reasoning. Specifically, the model engages in thinking only when the problem is determined to be challenging; for other simple questions, it will bypass the thinking process and directly produce a concise final solution. This approach substantially reduces inference costs while further improving overall performance.
 <img width="1327" alt="image" src="https://github.com/user-attachments/assets/35f62f31-3210-4f11-98cb-06d73e0231e8" />
 
 
@@ -22,7 +22,7 @@ We present **AdapThink**, a novel reinforcement learning (RL) algorithm that ena
 ## ⚙️ Released Models
 
 ### All Available Datasets and Models
-We apply the AdaptThink algorithm on DeepSeek-R1-Distill-Qwen-1.5B with $\delta$ from 0 to 0.1, and DeepSeek-R1-Distill-Qwen-7B with $\delta=0.05$. A larger $\large$ results in a higher proportion of NoThinking responses, which reduces more inference costs but also diminish the resultant improvement in accuracy.
+We apply the AdaptThink algorithm on DeepSeek-R1-Distill-Qwen-1.5B with $\delta$ from 0 to 0.1, and DeepSeek-R1-Distill-Qwen-7B with $\delta=0.05$. A larger $\large$ results in a higher proportion of NoThinking responses, which reduces more inference costs but also diminishes the resultant improvement in accuracy.
 
 All the trained models are available on HuggingFace. 
 
@@ -51,10 +51,10 @@ pip install flash-attn --no-build-isolation
 ```
 
 ### 2. Check the chat template in HF models
-After you download DeepSeek models, you should check `chat_template` in `tokenizer_config.json` to ensure the template is ends with `<｜Assistant｜><think>\\n`, otherwise there will be bebud when running our code.
+After you download DeepSeek models, you should check `chat_template` in `tokenizer_config.json` to ensure the template ends with `<｜Assistant｜><think>\\n`, otherwise there will be bugs when running our code.
 
 ### 3. Pre-sampling from reference models
-First, we need to pre-sample multiple responses from the reference model for each training problem to evalaute its instance-level accuracy. The sampling process will take severl hours. For convience, we have release our postprocessed results in `./data/train/ref_results` which .
+First, we need to pre-sample multiple responses from the reference model for each training problem to evaluate its instance-level accuracy. The sampling process will take several hours. For convenience, we have released our post-processed results in `./data/train/ref_results`, which can be directly used for training.
 ```
 # Initialize VLLM server. Set tensor_parallel_size to 8 for 7B model
 vllm serve deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B --served_model_name DeepSeek-R1-Distill-Qwen-1.5B --tensor_parallel_size 4
