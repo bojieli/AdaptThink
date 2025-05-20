@@ -136,7 +136,7 @@ We list our evaluation results as follows:
 If you find our work useful, please consider citing LongReward:
 
 ```
-@article{zhang2024adapt_think,
+@article{zhang2025adapt_think,
   title = {AdaptThink: LLM Can Learn When to Think} 
   author={Jiajie Zhang and Nianyi Lin and Lei Hou and Ling Feng and Juanzi Li},
   journal={arXiv preprint arXiv: 2505.13417},
