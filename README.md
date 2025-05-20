@@ -1,7 +1,7 @@
 # AdaptThink: LLM Can Learn When to Think
 
 <p align="center">
-    🤗 <a href="https://huggingface.co/collections/THU-KEG/adaptthink-682a1059aa9f5102c4fa0470" target="_blank">HF Repo</a> • 📃 <a href="" target="_blank">Paper</a>
+    🤗 <a href="https://huggingface.co/collections/THU-KEG/adaptthink-682a1059aa9f5102c4fa0470" target="_blank">HF Repo</a> • 📃 <a href="https://arxiv.org/abs/2505.13417" target="_blank">Paper</a>
 </p>
 
 ## 🔍 Table of Contents
@@ -139,7 +139,8 @@ If you find our work useful, please consider citing LongReward:
 @article{zhang2024adapt_think,
   title = {AdaptThink: LLM Can Learn When to Think} 
   author={Jiajie Zhang and Nianyi Lin and Lei Hou and Ling Feng and Juanzi Li},
-  journal={arXiv preprint arXiv:},
+  journal={arXiv preprint arXiv: 2505.13417},
+  url={https://arxiv.org/abs/2505.13417}
   year={2025}
 }
 ```
