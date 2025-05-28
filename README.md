@@ -57,7 +57,7 @@ After you download DeepSeek models, you should check `chat_template` in `tokeniz
 ### 3. Pre-sampling from reference models
 First, we need to pre-sample multiple responses from the reference model for each training problem to evaluate its instance-level accuracy. The sampling process will take several hours. For convenience, we have released our post-processed results in `./data/train/ref_results`, which can be directly used for training.
 ```
-# Initialize VLLM server. Set tensor_parallel_size to 8 for 7B model
+# Initialize VLLM server. 
 vllm serve deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B --served_model_name DeepSeek-R1-Distill-Qwen-1.5B --tensor_parallel_size 4
 
 # Sampling 16 responses for each training problem. 
