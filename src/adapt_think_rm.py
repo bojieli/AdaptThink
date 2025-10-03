@@ -8,7 +8,7 @@ from pylatexenc import latex2text
 import sympy
 from sympy.parsing import sympy_parser
 from typing import Optional
-from verl.utils.reward_score.math_verify import parse, verify
+from math_verify import parse, verify
 
 # logging.info("DeepscaleR Here!!!")
 
