@@ -20,3 +20,4 @@ transformers==4.51.2
 vllm==0.8.2
 wandb
 jsonlines
+math-verify
