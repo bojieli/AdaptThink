@@ -44,9 +44,9 @@ All the trained models are available on HuggingFace.
 Our training code is based on [VeRL](https://github.com/volcengine/verl) framework.
 
 ### 1. Creating Environment
-We use [vLLM](https://github.com/vllm-project/vllm) 0.8.2, which supports [flash-attention](https://github.com/Dao-AILab/flash-attention). 
+We use [vLLM](https://github.com/vllm-project/vllm), which supports [flash-attention](https://github.com/Dao-AILab/flash-attention). 
 ```
-conda create -n adapt_think python=3.10
+conda create -n adapt_think python=3.13
 pip install -r requirements.txt
 pip install flash-attn --no-build-isolation
 ```
